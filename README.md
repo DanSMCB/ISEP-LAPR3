@@ -1,2 +1,2 @@
 # ISEP-LAPR3
-Final Project of the Laboratory/Project III unit course.
+LAPR3 unit course final project. (2022/2023)
