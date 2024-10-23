@@ -1,0 +1,46 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+hide methods
+left to right direction
+skinparam classAttributeIconSize 0
+
+class Cabaz
+class Cliente
+class Empresa
+class Localização
+class Produtor
+class Utilizador
+
+class Cabaz{
+-dia
+-produtos
+}
+
+class Cliente{}
+
+class Empresa{
+-hub
+}
+
+class Localização{
+-codLoc
+-latitude
+-longitude
+}
+
+class Produtor{}
+
+class Utilizador{
+-codUser
+}
+
+Cliente "1" -- "*" Cabaz : requisita >
+Empresa "1" -- "*" Cabaz : requisita >
+Cabaz "1" -- "*" Produtor : é fornecido por >
+Cliente "1" -- "1" Utilizador : é um >
+Empresa "1" -- "1" Utilizador : é um >
+Produtor "1" -- "1" Utilizador : é um >
+Utilizador "1" -- "1" Localização : tem uma >
+
+@enduml

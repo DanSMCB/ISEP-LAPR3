@@ -1,0 +1,51 @@
+@startuml
+hide methods
+left to right direction
+skinparam classAttributeIconSize 0
+
+class User {
+    -Username
+    -Email
+    -Password
+}
+
+class SingleplayerLeaderboard {
+}
+
+class MultiplayerLeaderboard {
+}
+
+class Match {
+    -grid
+    -questions
+    -int currentScore
+    -bool isAgainstAI
+    +StartLevel()
+    +EndLevel()
+}
+
+class SinglePlayer {
+    -difficulty
+    -List<User> players
+    -string enemyUsername
+    -int seed
+    -bool enemyReady
+    +StartMatch()
+    +EndMatch()
+}
+
+class MultiPlayer{
+
+}
+
+User "1" - "1" Match : plays >
+User "1" - "1" PlayFabManager : authenticates via >
+User "1" - "1" PhotonManager : connects via >
+User "1" - "1..*" SingleplayerLeaderboard : appears in >
+User "1" - "1..*" MultiplayerLeaderboard : appears in >
+GameState "1" - "1" SingleplayerState : contains >
+GameState "1" - "1" MultiplayerState : contains >
+
+PlayFabManager "1" - "1" SingleplayerLeaderboard : manages >
+PlayFabManager "1" - "1" MultiplayerLeaderboard : manages >
+@enduml

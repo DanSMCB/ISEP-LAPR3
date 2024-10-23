@@ -1,0 +1,23 @@
+@startuml
+actor "Client" as cli
+participant ":main" as main
+
+activate cli
+
+cli -> main : pede para determinar os hubs \nda rede de distribuição
+
+activate main
+
+main --> cli : pede o número de hubs
+deactivate main
+
+cli -> main : dá o número de hubs
+
+activate main
+
+main --> cli : mostra os hubs
+deactivate main
+
+deactivate cli
+
+@enduml

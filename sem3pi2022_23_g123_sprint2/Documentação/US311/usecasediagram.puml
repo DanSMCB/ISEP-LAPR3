@@ -1,0 +1,28 @@
+@startuml
+left to right direction
+
+actor User as u
+
+package "<<System>> \n BattleWorth" {
+    u --> (Login on \n the application)
+    u --> (Register on \n the application)
+    u --> (Reset account password)
+    u --> (Delete created account)
+    u --> (Select a difficulty when playing \n in singleplayer mode)
+    u --> (Be rewarded credits \n in the end of a match)
+    u --> (Use a power during a \n singleplayer match)
+    u --> (Play a daily challenge mode)
+    u --> (Play against an AI if the multiplayer match \n takes too long to find an opponent)
+    u --> (Get a score in the \n end of a match)
+    u --> (Check online leaderboards)
+    (Check online leaderboards) ..> (Login on \n the application) : <<include>>
+    (Delete created account) ..> (Login on \n the application) : <<include>>
+    (Select a difficulty when playing \n in singleplayer mode) ..> (Login on \n the application) : <<include>>
+    (Use a power during a \n singleplayer match) ..> (Login on \n the application) : <<include>>
+    (Play a daily challenge mode) ..> (Login on \n the application) : <<include>>
+    (Play against an AI if the multiplayer match \n takes too long to find an opponent)
+    (Get a score in the \n end of a match) ..> (Login on \n the application) : <<include>>
+    (Be rewarded credits \n in the end of a match) ..> (Login on \n the application) : <<include>>
+}
+
+@enduml

@@ -1,0 +1,94 @@
+@startuml
+actor "Client" as cli
+participant ":main" as main
+participant ":FuncControRega" as funcControlador
+participant ":ControladorRega" as controlador
+participant ":RegaParcela" as parcela
+
+
+activate cli
+
+cli -> main : pede para usar a simulação do\nfuncionamento de um controlador de rega
+
+activate main
+main --> cli : pede o nome do ficheiro com\n a simulação do controlador de rega
+deactivate main
+
+cli -> main : digita o nome do ficheiro com a simulação\n do controlador de rega
+activate main
+
+main -> funcControlador : readFile(fileRega)
+activate funcControlador
+funcControlador -> parcela : RegaParcela(parcela, duracao, regularidade)
+activate parcela
+deactivate parcela
+deactivate funcControlador
+
+loop
+
+main --> cli : pede a data
+deactivate main
+
+cli -> main : digita a data
+activate main
+main --> cli : pede o tempo
+deactivate main
+cli -> main : digita o tempo
+activate main
+main -> funcControlador : isWatering(date,time)
+activate funcControlador
+funcControlador -> controlador : getHorasRega()
+activate controlador
+deactivate controlador
+
+
+loop (para cada hora de início de rega no ficheiro)
+
+funcControlador -> controlador : getTempoRegaTotal()
+activate controlador
+loop (para cada rega de parcela no ficheiro)
+controlador -> parcela : regaParcelas.size()
+activate parcela
+deactivate parcela
+controlador -> parcela : regaParcelas.get(i).getDuracao()
+activate parcela
+deactivate parcela
+deactivate controlador
+end
+
+funcControlador -> funcControlador : getPortion(date1, time1, hour)
+activate funcControlador
+loop (para cada rega de parcela no ficheiro)
+funcControlador -> controlador : controladorRega.getRegaParcelas()
+activate controlador
+deactivate controlador
+
+funcControlador -> funcControlador : isWateringDay(date, regaParcela)
+activate funcControlador
+funcControlador -> parcela : getRegularidade()
+activate parcela
+deactivate parcela
+deactivate funcControlador
+
+funcControlador -> parcela : getParcela()
+activate parcela
+deactivate parcela
+
+funcControlador -> funcControlador : getTimeLeft(time,hour)
+activate funcControlador
+deactivate funcControlador
+
+deactivate funcControlador
+end
+end
+funcControlador --> main : devolve o resultado
+deactivate funcControlador
+
+main --> cli : apresenta o resultado
+
+deactivate main
+end
+
+deactivate cli
+
+@enduml

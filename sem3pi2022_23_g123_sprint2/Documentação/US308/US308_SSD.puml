@@ -1,0 +1,22 @@
+@startuml
+actor "Client" as cli
+participant ":main" as main
+
+autonumber
+
+activate cli
+
+cli -> main: requisita uma lista de expedição para um dia
+activate main
+main --> cli: pede o nome do ficheiro e o dia
+deactivate main
+
+cli -> main: dá o nome do ficheiro e o dia
+activate main
+main --> cli: devolve ficheiro com a lista de expedição
+deactivate main
+
+deactivate main
+
+deactivate cli
+@enduml

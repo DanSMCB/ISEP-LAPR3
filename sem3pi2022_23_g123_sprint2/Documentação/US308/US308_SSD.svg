@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="294px" preserveAspectRatio="none" style="width:355px;height:294px;background:#FFFFFF;" version="1.1" viewBox="0 0 355 294" width="355px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="106.0938" style="stroke:#181818;stroke-width:1.0;" width="10" x="21" y="90.6406"/><rect fill="#FFFFFF" height="28.5234" style="stroke:#181818;stroke-width:1.0;" width="10" x="320" y="111.1641"/><rect fill="#FFFFFF" height="28.5234" style="stroke:#181818;stroke-width:1.0;" width="10" x="320" y="168.2109"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="26" x2="26" y1="80.6406" y2="214.7344"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="325" x2="325" y1="80.6406" y2="214.7344"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="5" y="77.6738">Client</text><ellipse cx="26" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M26,21.5 L26,48.5 M13,29.5 L39,29.5 M26,48.5 L13,63.5 M26,48.5 L39,63.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="5" y="226.4082">Client</text><ellipse cx="26" cy="237.875" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M26,245.875 L26,272.875 M13,253.875 L39,253.875 M26,272.875 L13,287.875 M26,272.875 L39,287.875 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#E2E2F0" height="29.6406" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="48" x="301" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="308" y="69.6738">:main</text><rect fill="#E2E2F0" height="29.6406" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="48" x="301" y="213.7344"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="308" y="233.4082">:main</text><rect fill="#FFFFFF" height="106.0938" style="stroke:#181818;stroke-width:1.0;" width="10" x="21" y="90.6406"/><rect fill="#FFFFFF" height="28.5234" style="stroke:#181818;stroke-width:1.0;" width="10" x="320" y="111.1641"/><rect fill="#FFFFFF" height="28.5234" style="stroke:#181818;stroke-width:1.0;" width="10" x="320" y="168.2109"/><polygon fill="#181818" points="308,107.1641,318,111.1641,308,115.1641,312,111.1641" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="31" x2="314" y1="111.1641" y2="111.1641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="38" y="106.4092">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="259" x="49" y="106.4092">requisita uma lista de expedição para um dia</text><polygon fill="#181818" points="42,135.6875,32,139.6875,42,143.6875,38,139.6875" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="36" x2="324" y1="139.6875" y2="139.6875"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="48" y="134.9326">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="181" x="59" y="134.9326">pede o nome do ficheiro e o dia</text><polygon fill="#181818" points="308,164.2109,318,168.2109,308,172.2109,312,168.2109" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="31" x2="314" y1="168.2109" y2="168.2109"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="38" y="163.4561">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="167" x="49" y="163.4561">dá o nome do ficheiro e o dia</text><polygon fill="#181818" points="37,192.7344,27,196.7344,37,200.7344,33,196.7344" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="31" x2="324" y1="196.7344" y2="196.7344"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="43" y="191.9795">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="235" x="54" y="191.9795">devolve ficheiro com a lista de expedição</text><!--MD5=[7282a96d3bc32289fba02d122714ff90]
+@startuml
+actor "Client" as cli
+participant ":main" as main
+
+autonumber
+
+activate cli
+
+cli -> main: requisita uma lista de expedição para um dia
+activate main
+main - -> cli: pede o nome do ficheiro e o dia
+deactivate main
+
+cli -> main: dá o nome do ficheiro e o dia
+activate main
+main - -> cli: devolve ficheiro com a lista de expedição
+deactivate main
+
+deactivate main
+
+deactivate cli
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 18:01:30 WEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

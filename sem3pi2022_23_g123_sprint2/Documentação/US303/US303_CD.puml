@@ -1,0 +1,16 @@
+@startuml
+main ..> DistibutionNetwork
+DistibutionNetwork ..> CommonGraph
+DistibutionNetwork ..> Algorithms
+
+main : +us303()
+
+DistibutionNetwork : -hubs
+DistibutionNetwork : +networkHubs(int n)
+
+Algorithms : +shortestPaths(Graph<V, E> g, V vOrig, Comparator<E> ce, BinaryOperator<E> sum, E zero,ArrayList<LinkedList<V>> paths, ArrayList<E> dists)
+
+CommonGraph : +vertices()
+CommonGraph : +numVertices()
+
+@enduml

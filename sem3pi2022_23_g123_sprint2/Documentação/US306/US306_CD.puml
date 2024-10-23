@@ -1,0 +1,23 @@
+@startuml
+main ..> FuncControRega
+FuncControRega ..> ControladorRega
+FuncControRega ..> RegaParcela
+ControladorRega ..> RegaParcela
+
+main : +us306()
+
+FuncControRega : +readFile(String filename)
+FuncControRega : +isWatering(String date, String time)
+FuncControRega : +getPortion(LocalDate date, LocalTime time, LocalTime hour)
+FuncControRega : +isWateringDay(LocalDate date, RegaParcela regaParcela)
+FuncControRega : +getTimeLeft(LocalTime time, LocalTime end)
+
+ControladorRega : +getHorasRega()
+ControladorRega : +getRegaParcelas()
+ControladorRega : +getTempoRegaTotal()
+
+RegaParcela : +getParcela()
+RegaParcela : +getDuracao()
+RegaParcela : +getRegularidade()
+
+@enduml

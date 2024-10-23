@@ -1,0 +1,27 @@
+@startuml
+actor "Client" as cli
+participant ":main" as main
+
+autonumber
+
+activate cli
+
+cli -> main: requisita um ficheiro com estatísticas
+activate main
+main --> cli: pede o nome do ficheiro com \n a lista de expedição
+deactivate main
+
+cli -> main: dá o nome do ficheiro com a \n lista de expedição
+activate main
+main --> cli: pede o nome do ficheiro onde vão \n ficar as estatísticas
+deactivate main
+
+cli -> main: dá o nome do ficheiro onde vão \n ficar as estatísticas
+activate main
+
+main --> cli: devolve o ficheiro
+
+deactivate main
+
+deactivate cli
+@enduml

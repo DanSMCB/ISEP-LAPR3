@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="309px" preserveAspectRatio="none" style="width:261px;height:309px;background:#FFFFFF;" version="1.1" viewBox="0 0 261 309" width="261px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="120.6172" style="stroke:#181818;stroke-width:1.0;" width="10" x="21" y="90.6406"/><rect fill="#FFFFFF" height="28.5234" style="stroke:#181818;stroke-width:1.0;" width="10" x="226" y="125.6875"/><rect fill="#FFFFFF" height="28.5234" style="stroke:#181818;stroke-width:1.0;" width="10" x="226" y="182.7344"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="26" x2="26" y1="80.6406" y2="229.2578"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="231" x2="231" y1="80.6406" y2="229.2578"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="5" y="77.6738">Client</text><ellipse cx="26" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M26,21.5 L26,48.5 M13,29.5 L39,29.5 M26,48.5 L13,63.5 M26,48.5 L39,63.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="5" y="240.9316">Client</text><ellipse cx="26" cy="252.3984" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M26,260.3984 L26,287.3984 M13,268.3984 L39,268.3984 M26,287.3984 L13,302.3984 M26,287.3984 L39,302.3984 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#E2E2F0" height="29.6406" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="48" x="207" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="214" y="69.6738">:main</text><rect fill="#E2E2F0" height="29.6406" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="48" x="207" y="228.2578"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="214" y="247.9316">:main</text><rect fill="#FFFFFF" height="120.6172" style="stroke:#181818;stroke-width:1.0;" width="10" x="21" y="90.6406"/><rect fill="#FFFFFF" height="28.5234" style="stroke:#181818;stroke-width:1.0;" width="10" x="226" y="125.6875"/><rect fill="#FFFFFF" height="28.5234" style="stroke:#181818;stroke-width:1.0;" width="10" x="226" y="182.7344"/><polygon fill="#181818" points="214,121.6875,224,125.6875,214,129.6875,218,125.6875" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="31" x2="220" y1="125.6875" y2="125.6875"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="172" x="38" y="106.4092">pede para determinar os hubs</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="131" x="38" y="120.9326">da rede de distribuição</text><polygon fill="#181818" points="42,150.2109,32,154.2109,42,158.2109,38,154.2109" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="36" x2="230" y1="154.2109" y2="154.2109"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="136" x="48" y="149.4561">pede o número de hubs</text><polygon fill="#181818" points="214,178.7344,224,182.7344,214,186.7344,218,182.7344" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="31" x2="220" y1="182.7344" y2="182.7344"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="122" x="38" y="177.9795">dá o número de hubs</text><polygon fill="#181818" points="37,207.2578,27,211.2578,37,215.2578,33,211.2578" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="31" x2="230" y1="211.2578" y2="211.2578"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="43" y="206.5029">mostra os hubs</text><!--MD5=[b73eb06790b329976a44a1cadfd5029d]
+@startuml
+actor "Client" as cli
+participant ":main" as main
+
+activate cli
+
+cli -> main : pede para determinar os hubs \nda rede de distribuição
+
+activate main
+
+main - -> cli : pede o número de hubs
+deactivate main
+
+cli -> main : dá o número de hubs
+
+activate main
+
+main - -> cli : mostra os hubs
+deactivate main
+
+deactivate cli
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 18:01:30 WEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

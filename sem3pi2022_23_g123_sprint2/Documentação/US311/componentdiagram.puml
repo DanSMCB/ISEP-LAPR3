@@ -1,0 +1,42 @@
+@startuml
+left to right direction
+
+package "User Interface" {
+    [Login]
+    [Main]
+    [Singleplayer]
+    [StatScreen]
+    [StatScreenMultiplayer]
+}
+
+package "Game Logic" {
+    [GameState]
+    [SingleplayerState]
+    [QuizGenerator]
+    [ShowQuiz]
+    [DailyChallengeManager]
+    [MultiplayerState]
+    [PhotonListener]
+    [PhotonSlave]
+}
+
+package "External Services" {
+    [PlayFabManager]
+}
+
+[User] --> [Login]
+[User] --> [Main]
+[User] --> [Singleplayer]
+[User] --> [StatScreen]
+[User] --> [StatScreenMultiplayer]
+
+[Login] --> [PlayFabManager]
+[Singleplayer] --> [GameState]
+[Singleplayer] --> [SingleplayerState]
+[Main] --> [DailyChallengeManager]
+[Main] --> [MultiplayerState]
+[MultiplayerState] --> [PhotonListener]
+[PhotonListener] --> [PhotonSlave]
+[QuizGenerator] --> [ShowQuiz]
+
+@enduml

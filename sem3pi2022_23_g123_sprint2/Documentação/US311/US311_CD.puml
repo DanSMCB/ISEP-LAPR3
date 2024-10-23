@@ -1,0 +1,26 @@
+@startuml
+main ..> DistibutionNetwork
+DistibutionNetwork ..> CommonGraph
+DistibutionNetwork ..> Cabaz
+DistibutionNetwork ..> User
+User ..> Cabaz
+
+
+main : +us311()
+
+DistibutionNetwork : -networkGraph
+DistibutionNetwork : +estatisticasProdutorHub(String inputFile, String outputFile, StringBuilder output)
+DistibutionNetwork : estatisticasCabaz(String inputFile, String outputFile)
+DistibutionNetwork : +ficheiroOutput(String filename, String output)
+
+User : +getCabaz()
+User : +getCodUser()
+
+Cabaz : +getDia()
+Cabaz : +getProdutos()
+
+abstract class CommonGraph{
++vertices()
+}
+
+@enduml

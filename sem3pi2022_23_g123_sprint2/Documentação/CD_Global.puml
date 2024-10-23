@@ -1,0 +1,192 @@
+@startuml
+
+'left to right direction
+
+main ..> DistibutionNetwork
+main ..> FuncControRega
+DistibutionNetwork ..> CommonGraph
+DistibutionNetwork ..> Graph
+DistibutionNetwork ..> User
+User ..> Cabaz
+User ..> Localizacao
+class Cliente extends User
+class Empresa extends User
+class Produtor extends User
+DistibutionNetwork ..> MapGraph
+DistibutionNetwork ..> Algorithms
+DistibutionNetwork ..> Localizacao
+DistibutionNetwork ..> Empresa
+DistibutionNetwork ..> Cliente
+DistibutionNetwork ..> Produtor
+DistibutionNetwork ..> Cabaz
+FuncControRega ..> ControladorRega
+FuncControRega ..> RegaParcela
+ControladorRega ..> RegaParcela
+Graph ..> Edge
+class CommonGraph implements Graph
+class MapGraph extends CommonGraph
+class MapGraph implements Graph
+
+
+
+DistibutionNetwork : -networkGraph
+DistibutionNetwork : -hubs
+DistibutionNetwork : +read(String filename)
+DistibutionNetwork : +readDistances(String filename)
+DistibutionNetwork : +getNetworkGraph()
+DistibutionNetwork : +readCabaz(String filename)
+DistibutionNetwork : +networkHubs(int n)
+DistibutionNetwork : +getClientsNearestHub ()
+DistibutionNetwork : +redeDistanciaMin (Graph<User, Float> g)
+DistibutionNetwork : +numeroLigacoesMin (Graph<User, Float> g)
+DistibutionNetwork : +printfGrafo(Graph<User, Float> g)
+DistibutionNetwork : +getNearestProducers (int n, Map<Empresa, Float> hubs)
+DistibutionNetwork : +listaExpedicaoRestricao (int n, int dia, String filename)
+DistibutionNetwork : +listaExpedicao(int dia, String filename)
+DistibutionNetwork : +percursoEntregaMin (Map<User, ArrayList<Produtor>> lista)
+DistibutionNetwork : +estatisticasProdutorHub(String inputFile, String outputFile, StringBuilder output)
+DistibutionNetwork : estatisticasCabaz(String inputFile, String outputFile)
+DistibutionNetwork : +ficheiroOutput(String filename, String output)
+
+User : -localizacao
+User : -codUser
+User : -cabazes
+User : +User(Localizacao localizacao, String codUser)
+User : +getCabaz()
+User : +addCabaz()
+User : +getCodUser()
+User : +getLocalization()
+User : +addCabaz(Cabaz cabaz)
+User : +toString()
+User : +equals(Object obj)
+User : +compareTo(User o)
+
+Cabaz : -dia
+Cabaz : -produtos
+Cabaz : +Cabaz(int dia, List<Float> produtos)
+Cabaz : +getDia()
+Cabaz : +getProdutos()
+Cabaz : +toString()
+
+abstract class CommonGraph{
+#numVerts
+#numEdges
+#isDirected
+#vertices
++CommonGraph(boolean directed)
++isDirected()
++numVertices()
++vertices()
++validVertex(V vert)
++key(V vert)
++vertex(int key)
++vertex(Predicate<V> p)
++numEdges()
++copy(Graph <V,E> from, Graph <V,E> to)
++equals(Object otherObj)
++clone()
++hashCode()
+}
+
+
+interface Graph{
+isDirected()
+numVertices()
+vertices()
+validVertex(V vert)
+key(V vert)
+vertex(int key)
+adjVertices(V vert)
+edges()
+edge(V vOrig, V vDest)
+edge(int vOrigKey, int vDestKey)
+outDegree(V vert)
+inDegree(V vert)
+outgoingEdges(V vert)
+incomingEdges(V vert)
+addVertex(V vert)
+addEdge(V vOrig, V vDest, E weight)
+removeVertex(V vert)
+removeEdge(V vOrig, V vDest)
+clone()
+}
+
+Edge : -vOrig
+Edge : -vDest
+Edge : -weight
+Edge : +Edge(V vOrig, V vDest, E weight)
+Edge : +getVOrig()
+Edge : +getVDest()
+Edge : +getWeight()
+Edge : +setWeight(E weight)
+Edge : +toString()
+Edge : +equals(Object o)
+Edge : +hashCode()
+
+FuncControRega : +readFile(String filename)
+FuncControRega : +isWatering(String date, String time)
+FuncControRega : +getPortion(LocalDate date, LocalTime time, LocalTime hour)
+FuncControRega : +isWateringDay(LocalDate date, RegaParcela regaParcela)
+FuncControRega : +getTimeLeft(LocalTime time, LocalTime end)
+
+ControladorRega : -horasRega
+ControladorRega : -regaParcelas
+ControladorRega : +ControladorRega(ArrayList<LocalTime> horasRega, ArrayList<RegaParcela> regaParcelas)
+ControladorRega : +getHorasRega()
+ControladorRega : +getRegaParcelas()
+ControladorRega : +getTempoRegaTotal()
+
+RegaParcela : -parcela
+RegaParcela : -duracao
+RegaParcela : -regularidade
+RegaParcela : +getParcela()
+RegaParcela : +getDuracao()
+RegaParcela : +getRegularidade()
+
+Algorithms : +BreadthFirstSearch(Graph<V, E> g, V vOrigin)
+Algorithms : +DepthFirstSearch(Graph<V, E> g, V vOrig, boolean[] visited, LinkedList<V> qdfs)
+Algorithms : +DepthFirstSearch(Graph<V, E> g, V vert)
+Algorithms : +shortestPathDijkstra(Graph<V, E> g, V vOrig, Comparator<E> ce, BinaryOperator<E> sum, E zero, boolean[] visited, V [] pathKeys, E [] dist)
+Algorithms : +shortestPath(Graph<V, E> g, V vOrig, V vDest, Comparator<E> ce, BinaryOperator<E> sum, E zero, LinkedList<V> shortPath)
+Algorithms : +shortestPaths(Graph<V, E> g, V vOrig, Comparator<E> ce, BinaryOperator<E> sum, E zero,ArrayList<LinkedList<V>> paths, ArrayList<E> dists)
+Algorithms : +getPath(Graph<V, E> g, V vOrig, V vDest, V[] pathKeys, LinkedList<V> path)
+Algorithms : +minDistGraph(Graph <V,E> g, Comparator<E> ce, BinaryOperator<E> sum)
+Algorithms : +ligacoesMinGrafo(Graph <V,E> g)
+Algorithms : +connectComps (Graph<V,E> g, ArrayList<LinkedList<V>> ccs, boolean[] visited)
+Algorithms : +connectComps(Graph<V, E> g)
+Algorithms : +kruskall (Graph<V,E> g)
+
+MapGraph : -mapVertices
+MapGraph : +MapGraph(boolean directed)
+MapGraph : +MapGraph(Graph<V,E> g)
+MapGraph : +validVertex(V vert)
+MapGraph : +adjVertices(V vert)
+MapGraph : +edges()
+MapGraph : +edge(V vOrig, V vDest)
+MapGraph : +edge(int vOrigKey, int vDestKey)
+MapGraph : +outDegree(V vert)
+MapGraph : +inDegree(V vert)
+MapGraph : +outgoingEdges(V vert)
+MapGraph : +incomingEdges(V vert)
+MapGraph : +addVertex(V vert)
+MapGraph : +addEdge(V vOrig, V vDest, E weight)
+MapGraph : +removeVertex(V vert)
+MapGraph : +removeEdge(V vOrig, V vDest)
+MapGraph : +clone()
+
+Localizacao : -codLoc
+Localizacao : -latitude
+Localizacao : -longitude
+Localizacao : +Localizacao(String codLoc, Float latitude, Float longitude)
+Localizacao : +getCodLoc()
+
+Empresa : -hub
+Empresa : +Empresa(Localizacao localizacao, String codUser)
+Empresa : +setHubTrue()
+
+Cliente : +Cliente(Localizacao localization, String codUser)
+
+Produtor : +Produtor(Localizacao localizacao, String codUser)
+
+
+@enduml

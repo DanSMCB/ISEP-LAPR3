@@ -1,0 +1,61 @@
+@startuml
+actor "Client" as cli
+participant ":main" as main
+participant ":DistributionNetwork" as disNet
+participant ":CommonGraph" as graph
+participant ":User" as user
+participant ":Cabaz" as cabaz
+
+autonumber
+
+activate cli
+
+cli -> main: requisita uma lista de expedição
+activate main
+main --> cli: pede o nome do ficheiro e a dia
+deactivate main
+
+cli -> main: dá o nome do ficheiro e o dia
+activate main
+
+activate main
+main -> disNet: listaExpedicao(int dia, String filename)
+
+activate disNet
+disNet -> disNet: getClientsNearestHub()
+activate disNet
+
+disNet -> graph : vertices()
+activate graph
+deactivate graph
+
+loop (para cada produtor)
+
+disNet -> user : getCabaz()
+activate user
+deactivate user
+
+disNet -> cabaz : getDia()
+activate cabaz
+deactivate cabaz
+
+disNet -> cabaz : getProdutos()
+activate cabaz
+deactivate cabaz
+
+end
+
+disNet -> disNet: ficheiroOutput \n(outputFile, output.toString());
+activate disNet
+
+deactivate disNet
+deactivate disNet
+disNet --> main: devolve o ficheiro
+deactivate disNet
+
+main --> cli: devolve o ficheiro
+
+deactivate main
+
+deactivate cli
+@enduml

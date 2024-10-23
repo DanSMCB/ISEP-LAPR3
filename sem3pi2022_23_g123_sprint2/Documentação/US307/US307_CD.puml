@@ -1,0 +1,24 @@
+@startuml
+
+main ..>  DistibutionNetwork
+DistibutionNetwork ..> CommonGraph
+DistibutionNetwork ..> Cabaz
+DistibutionNetwork ..> User
+User ..> Cabaz
+
+main : +us307()
+
+Cabaz : +getCabaz()
+
+User : +addCabaz(Cabaz cabaz)
+
+DistibutionNetwork : +read(String filename)
+DistibutionNetwork : +readCabaz(String filename)
+
+
+abstract class CommonGraph{
++vertices()
+}
+
+
+@enduml

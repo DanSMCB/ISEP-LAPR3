@@ -1,0 +1,23 @@
+@startuml
+actor "Client" as cli
+participant ":main" as main
+
+autonumber
+
+activate cli
+
+cli -> main : inicia o processo
+activate main
+
+main --> cli: pede o nome do ficheiro com os cabazes
+deactivate main
+
+cli -> main: dá o nome do ficheiro com os cabazes
+activate main
+
+main --> cli: fim do processo
+
+deactivate main
+
+deactivate cli
+@enduml

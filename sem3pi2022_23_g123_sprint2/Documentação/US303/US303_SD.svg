@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="645px" preserveAspectRatio="none" style="width:719px;height:645px;background:#FFFFFF;" version="1.1" viewBox="0 0 719 645" width="719px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="456.8047" style="stroke:#181818;stroke-width:1.0;" width="10" x="21" y="90.6406"/><rect fill="#FFFFFF" height="145.5703" style="stroke:#181818;stroke-width:1.0;" width="10" x="226" y="125.6875"/><rect fill="#FFFFFF" height="247.6641" style="stroke:#181818;stroke-width:1.0;" width="10" x="226" y="299.7813"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="363" y="154.2109"/><rect fill="#FFFFFF" height="190.6172" style="stroke:#181818;stroke-width:1.0;" width="10" x="363" y="328.3047"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="499.5" y="212.7344"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="499.5" y="356.8281"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="659" y="453.3984"/><rect fill="none" height="89.5703" style="stroke:#000000;stroke-width:1.5;" width="425" x="288.5" y="401.8281"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="26" x2="26" y1="80.6406" y2="565.4453"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="231" x2="231" y1="80.6406" y2="565.4453"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="367.5" x2="367.5" y1="80.6406" y2="565.4453"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="504.5" x2="504.5" y1="80.6406" y2="565.4453"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="663.5" x2="663.5" y1="80.6406" y2="565.4453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="5" y="77.6738">Client</text><ellipse cx="26" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M26,21.5 L26,48.5 M13,29.5 L39,29.5 M26,48.5 L13,63.5 M26,48.5 L39,63.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="5" y="577.1191">Client</text><ellipse cx="26" cy="588.5859" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M26,596.5859 L26,623.5859 M13,604.5859 L39,604.5859 M26,623.5859 L13,638.5859 M26,623.5859 L39,638.5859 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#E2E2F0" height="29.6406" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="48" x="207" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="214" y="69.6738">:main</text><rect fill="#E2E2F0" height="29.6406" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="48" x="207" y="564.4453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="214" y="584.1191">:main</text><rect fill="#E2E2F0" height="29.6406" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="139" x="298.5" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="305.5" y="69.6738">:DistributionNetwork</text><rect fill="#E2E2F0" height="29.6406" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="139" x="298.5" y="564.4453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="305.5" y="584.1191">:DistributionNetwork</text><rect fill="#E2E2F0" height="29.6406" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="114" x="447.5" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="454.5" y="69.6738">:CommonGraph</text><rect fill="#E2E2F0" height="29.6406" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="114" x="447.5" y="564.4453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="454.5" y="584.1191">:CommonGraph</text><rect fill="#E2E2F0" height="29.6406" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="79" x="624.5" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="631.5" y="69.6738">:Algoithms</text><rect fill="#E2E2F0" height="29.6406" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="79" x="624.5" y="564.4453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="631.5" y="584.1191">:Algoithms</text><rect fill="#FFFFFF" height="456.8047" style="stroke:#181818;stroke-width:1.0;" width="10" x="21" y="90.6406"/><rect fill="#FFFFFF" height="145.5703" style="stroke:#181818;stroke-width:1.0;" width="10" x="226" y="125.6875"/><rect fill="#FFFFFF" height="247.6641" style="stroke:#181818;stroke-width:1.0;" width="10" x="226" y="299.7813"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="363" y="154.2109"/><rect fill="#FFFFFF" height="190.6172" style="stroke:#181818;stroke-width:1.0;" width="10" x="363" y="328.3047"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="499.5" y="212.7344"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="499.5" y="356.8281"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="659" y="453.3984"/><polygon fill="#181818" points="214,121.6875,224,125.6875,214,129.6875,218,125.6875" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="31" x2="220" y1="125.6875" y2="125.6875"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="172" x="38" y="106.4092">pede para determinar os hubs</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="131" x="38" y="120.9326">da rede de distribuição</text><polygon fill="#181818" points="351,150.2109,361,154.2109,351,158.2109,355,154.2109" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="236" x2="357" y1="154.2109" y2="154.2109"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="108" x="243" y="149.4561">getNetworkGraph()</text><polygon fill="#181818" points="487.5,208.7344,497.5,212.7344,487.5,216.7344,491.5,212.7344" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="236" x2="493.5" y1="212.7344" y2="212.7344"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="243" y="207.9795">vertices()</text><polygon fill="#181818" points="42,267.2578,32,271.2578,42,275.2578,38,271.2578" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="36" x2="230" y1="271.2578" y2="271.2578"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="136" x="48" y="266.5029">pede o número de hubs</text><polygon fill="#181818" points="214,295.7813,224,299.7813,214,303.7813,218,299.7813" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="31" x2="220" y1="299.7813" y2="299.7813"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="122" x="38" y="295.0264">dá o número de hubs</text><polygon fill="#181818" points="351,324.3047,361,328.3047,351,332.3047,355,328.3047" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="236" x2="357" y1="328.3047" y2="328.3047"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="243" y="323.5498">networkHubs(n)</text><polygon fill="#181818" points="487.5,352.8281,497.5,356.8281,487.5,360.8281,491.5,356.8281" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="373" x2="493.5" y1="356.8281" y2="356.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="380" y="352.0732">vertices()</text><path d="M288.5,401.8281 L361.5,401.8281 L361.5,408.3516 L351.5,418.3516 L288.5,418.3516 L288.5,401.8281 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/><rect fill="none" height="89.5703" style="stroke:#000000;stroke-width:1.5;" width="425" x="288.5" y="401.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="28" x="303.5" y="414.5967">loop</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="121" x="376.5" y="413.7861">[(para cada empresa)]</text><polygon fill="#181818" points="647,449.3984,657,453.3984,647,457.3984,651,453.3984" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="373" x2="653" y1="453.3984" y2="453.3984"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="267" x="380" y="434.1201">shortestPaths(networkGraph,u,Float::compare</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="228" x="380" y="448.6436">,Float::sum,0F,new ArrayList&lt;&gt;(),dists)</text><polygon fill="#181818" points="247,514.9219,237,518.9219,247,522.9219,243,518.9219" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="241" x2="367" y1="518.9219" y2="518.9219"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="28" x="253" y="514.167">hubs</text><polygon fill="#181818" points="37,543.4453,27,547.4453,37,551.4453,33,547.4453" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="31" x2="230" y1="547.4453" y2="547.4453"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="43" y="542.6904">mostra os hubs</text><!--MD5=[664038307a3bcfc4092e55cbaab4726f]
+@startuml
+actor "Client" as cli
+participant ":main" as main
+participant ":DistributionNetwork" as disNet
+participant ":CommonGraph" as graph
+participant ":Algoithms" as alg
+
+activate cli
+
+cli -> main : pede para determinar os hubs \nda rede de distribuição
+
+activate main
+
+main -> disNet : getNetworkGraph()
+activate disNet
+deactivate disNet
+
+main -> graph : vertices()
+activate graph
+deactivate graph
+
+main - -> cli : pede o número de hubs
+deactivate main
+
+cli -> main : dá o número de hubs
+
+activate main
+
+main -> disNet :networkHubs(n)
+activate disNet
+
+
+disNet -> graph : vertices()
+activate graph
+deactivate graph
+
+loop (para cada empresa)
+disNet -> alg : shortestPaths(networkGraph,u,Float::compare\n,Float::sum,0F,new ArrayList<>(),dists)
+activate alg
+deactivate alg
+end
+
+disNet - -> main : hubs
+
+deactivate disNet
+
+main - -> cli : mostra os hubs
+deactivate main
+
+deactivate cli
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 18:01:30 WEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

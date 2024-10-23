@@ -1,0 +1,25 @@
+@startuml
+actor "Client" as cli
+participant ":main" as main
+
+autonumber
+
+activate cli
+
+cli -> main: requisita uma lista de expedição para um dia e para N produtores a fornecer
+activate main
+main --> cli: pede o nome do ficheiro e o dia
+deactivate main
+
+cli -> main: dá o nome do ficheiro e o dia
+activate main
+main --> cli: pede o número de produtores
+deactivate main
+
+cli -> main: coloca o número de produtores
+activate main
+main --> cli: devolve ficheiro com a lista de expedição
+deactivate main
+
+deactivate cli
+@enduml

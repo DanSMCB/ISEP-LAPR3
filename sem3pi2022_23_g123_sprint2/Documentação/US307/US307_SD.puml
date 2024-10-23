@@ -1,0 +1,43 @@
+@startuml
+actor "Client" as cli
+participant ":main" as main
+participant ":DistributionNetwork" as disNet
+participant ":CommonGraph" as graph
+participant ":User" as user
+participant ":Cabaz" as cabaz
+
+autonumber
+
+activate cli
+
+cli -> main : inicia o processo
+activate main
+
+main --> cli: pede o nome do ficheiro com os cabazes
+deactivate main
+
+cli -> main: dá o nome do ficheiro com os cabazes
+activate main
+
+main -> disNet: readCabaz(String filename)
+activate disNet
+
+loop (para cada User)
+disNet -> graph : vertices()
+activate graph
+deactivate graph
+disNet -> user : addCabaz(cabaz)
+activate user
+deactivate user
+end
+
+
+disNet --> main: fim do processo
+deactivate disNet
+
+main --> cli: fim do processo
+
+deactivate main
+
+deactivate cli
+@enduml

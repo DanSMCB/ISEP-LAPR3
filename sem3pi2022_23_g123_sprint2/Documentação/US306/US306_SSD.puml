@@ -1,0 +1,35 @@
+@startuml
+actor "Client" as cli
+participant ":main" as main
+
+
+activate cli
+
+cli -> main : pede para usar a simulação do\nfuncionamento de um controlador de rega
+
+activate main
+main --> cli : pede o nome do ficheiro com\n a simulação do controlador de rega
+deactivate main
+
+cli -> main : digita o nome do ficheiro com a simulação\n do controlador de rega
+activate main
+loop
+
+main --> cli : pede a data
+deactivate main
+
+cli -> main : digita a data
+activate main
+main --> cli : pede o tempo
+deactivate main
+cli -> main : digita o tempo
+activate main
+
+main --> cli : apresenta o resultado
+
+deactivate main
+end
+
+deactivate cli
+
+@enduml

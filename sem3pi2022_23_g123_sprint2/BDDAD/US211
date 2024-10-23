@@ -1,0 +1,52 @@
+CREATE OR REPLACE PROCEDURE cancelar_operacao_nao_realizada (
+    p_localizacao_parcela IN OperacaoAgricola.localizacaoParcela%TYPE,
+    p_codigo_aplicacao IN OperacaoAgricola.codigoAplicacao%TYPE,
+    p_tipo_operacao IN OperacaoAgricola.tipoOperacao%TYPE,
+    p_data_planeada IN OperacaoAgricola.dataPlaneada%TYPE,
+    p_data_realizada IN OperacaoAgricola.dataRealizada%TYPE,
+    p_id_operacao_agricola IN OperacaoAgricola.idOperacaoAgricola%TYPE
+)
+AS
+p_data_planeada1 DATE;
+p_data_realizada1 DATE;
+BEGIN
+
+    SELECT dataPlaneada
+    INTO p_data_planeada1
+    FROM OperacaoAgricola
+    WHERE idOperacaoAgricola = p_id_operacao_agricola;
+    
+    SELECT dataRealizada
+    INTO p_data_realizada1
+    FROM OperacaoAgricola
+    WHERE idOperacaoAgricola = p_id_operacao_agricola;
+
+    IF p_data_realizada1 IS NOT NULL THEN
+        RAISE_APPLICATION_ERROR(-20001, 'Operação já realizada');
+    ELSIF p_data_planeada1 IS NOT NULL AND p_data_realizada1 IS NULL THEN
+        UPDATE OperacaoAgricola
+        SET dataPlaneada = NULL
+        WHERE idOperacaoAgricola = p_id_operacao_agricola;
+    ELSIF p_data_realizada1 IS NULL THEN
+        UPDATE OperacaoAgricola
+        SET codigoAplicacao = p_codigo_aplicacao
+        WHERE idOperacaoAgricola = p_id_operacao_agricola;
+
+        UPDATE OperacaoAgricola
+        SET tipoOperacao = p_tipo_operacao
+        WHERE idOperacaoAgricola = p_id_operacao_agricola;
+
+        UPDATE OperacaoAgricola
+        SET localizacaoParcela = p_localizacao_parcela
+        WHERE idOperacaoAgricola = p_id_operacao_agricola;
+
+        UPDATE OperacaoAgricola
+        SET dataPlaneada = p_data_planeada
+        WHERE idOperacaoAgricola = p_id_operacao_agricola;
+
+        UPDATE OperacaoAgricola
+        SET idOperacaoAgricola = p_id_operacao_agricola
+        WHERE idOperacaoAgricola = p_id_operacao_agricola;
+    END IF;
+END;
+COMMIT;

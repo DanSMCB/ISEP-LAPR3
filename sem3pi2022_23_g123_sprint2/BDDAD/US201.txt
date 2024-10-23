@@ -1,0 +1,18 @@
+Nomes devem dos atributos em letra minúscula.
+Nomes das tabelas começam com letra Maiúscula
+Nomes devem conter apenas letras maiúsculas, quando necessário, para separar duas palavras num nome de
+um atributo
+Caso o nome seja muito comprido ou caso já haja uma abreviatura conhecida deve ser usada a abreviatura
+
+Tabelas devem ter os nomes no singular.
+Tabelas não devem ter nomes repetidos.
+
+Os nomes dos atributos podem se repetir em tabelas diferentes mas nunca na mesma tabela.
+Nenhum atributo deve ter o nome da tabela a que pertence.
+Todos os atributos devem ter nomes no singular.
+
+Os nomes de constraints devem ter um prefixo para o tipo de constraint.
+As constraints para definir chaves primarias devem ter o nome no formato "pk_tabela".
+As constraints para definir chaves estrangeiras devem ter o nome no formato "fk_atributo_tabela".
+As constraints que usam atributos únicos ou candidatos a chaves primárias devem ter o nome no formato "un_atributo_tabela".
+As constraints que usam CHECK devem ter o prefixo "ck_atributo_condicao".

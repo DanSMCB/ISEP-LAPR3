@@ -1,0 +1,52 @@
+@startuml
+actor "Client" as cli
+participant ":main" as main
+participant ":DistributionNetwork" as disNet
+participant ":CommonGraph" as graph
+participant ":Algoithms" as alg
+
+activate cli
+
+cli -> main : pede para determinar os hubs \nda rede de distribuição
+
+activate main
+
+main -> disNet : getNetworkGraph()
+activate disNet
+deactivate disNet
+
+main -> graph : vertices()
+activate graph
+deactivate graph
+
+main --> cli : pede o número de hubs
+deactivate main
+
+cli -> main : dá o número de hubs
+
+activate main
+
+main -> disNet :networkHubs(n)
+activate disNet
+
+
+disNet -> graph : vertices()
+activate graph
+deactivate graph
+
+loop (para cada empresa)
+disNet -> alg : shortestPaths(networkGraph,u,Float::compare\n,Float::sum,0F,new ArrayList<>(),dists)
+activate alg
+deactivate alg
+end
+
+disNet --> main : hubs
+
+deactivate disNet
+
+main --> cli : mostra os hubs
+deactivate main
+
+deactivate cli
+
+@enduml

@@ -1,0 +1,29 @@
+@startuml
+main ..> DistibutionNetwork
+DistibutionNetwork ..> CommonGraph
+DistibutionNetwork ..> Cabaz
+DistibutionNetwork ..> User
+User ..> Cabaz
+
+
+main : +us308()
+
+DistibutionNetwork : -networkGraph
+DistibutionNetwork : +listaExpedicao(int dia, String filename)
+DistibutionNetwork : +getClientsNearestHub()
+DistibutionNetwork : getClientsNearestHub()
+
+
+User : +getCabaz()
+User : +getCodUser()
+
+
+Cabaz : +getDia()
+Cabaz : +getProdutos()
+
+
+abstract class CommonGraph{
++vertices()
+}
+
+@enduml

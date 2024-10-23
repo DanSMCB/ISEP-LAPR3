@@ -1,0 +1,130 @@
+@startuml
+
+class AINameGenerator {
+}
+
+class ChangeDynUI {
+}
+
+class ChangeSingleplayerState {
+}
+
+class CreditManager {
+}
+
+class DailyChallengeManager {
+}
+
+class GameState {
+}
+
+class GameStateSlave {
+}
+
+class MultiplayerState{
+}
+
+class LevelSystem {
+}
+
+class MultiplayerButtonSlave {
+}
+
+class PlayFabLeaderboard {
+}
+
+class PlayFabManager {
+}
+
+class PowerButtonsSlave {
+}
+
+class Question {
+}
+
+class Quiz {
+}
+
+class QuizGenerator {
+}
+
+class ShowQuiz {
+}
+
+class SimpleLoader {
+}
+
+class SingleplayerState {
+}
+
+class StatShower {
+}
+
+class Tile {
+}
+
+class Word {
+}
+
+class WordLocation {
+}
+
+class PhotonSlave {
+}
+
+class Route {
+}
+
+class Timer{
+}
+
+class WordGenerator {
+}
+
+class WordBase {
+}
+
+class DictionaryReader {
+}
+
+ChangeSingleplayerState --> GameStateSlave
+LevelSystem --> Tile
+LevelSystem --> WordLocation
+LevelSystem --> Word
+LevelSystem --> Quiz
+LevelSystem --> QuizGenerator
+LevelSystem --> ShowQuiz
+LevelSystem --> GameStateSlave
+LevelSystem --> Timer
+Quiz --> Question
+Quiz --> Word
+Quiz --> WordLocation
+QuizGenerator --> Quiz
+QuizGenerator --> WordLocation
+QuizGenerator --> Word
+GameState --> PropertyKeyVal
+GameStateSlave --> GameState
+GameStateSlave --> SingleplayerState
+GameStateSlave --> MultiplayerState
+GameStateSlave --> PhotonSlave
+MultiplayerButtonSlave --> GameStateSlave
+ChangeDynUI --> GameStateSlave
+ChangeDynUI --> Route
+PowerButtonsSlave --> CreditManager
+PowerButtonsSlave --> GameStateSlave
+PowerButtonsSlave --> LevelSystem
+PowerButtonsSlave --> Timer
+SimpleLoader --> GameStateSlave
+PhotonSlave --> MultiplayerButtonSlave
+PhotonSlave --> PhotonListener
+MultiplayerState --> GameStateSlave
+StatShower --> CreditManager
+StatShower --> AINameGenerator
+StatShower --> PlayFabLeaderboard
+StatShower --> GameStateSlave
+WordGenerator --> DictionaryReader
+WordGenerator --> WordBase
+WordGenerator --> Word
+DictionaryReader --> WordBase
+
+@enduml

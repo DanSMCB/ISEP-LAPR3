@@ -1,0 +1,1 @@
+void updateMatrix(double matrix[6][3], unsigned short *readings, unsigned long readings_size, unsigned short id);
